@@ -4,10 +4,7 @@ import java.util.*;
     Scanner sc = new Scanner(System.in);
     for(int i=1;;i++){  
       int n0=0;
-      if(sc.hasNextInt()){
-         n0= sc.nextInt();
-      }
-    
+         n0= sc.nextInt();  
     int n1, n2, n3, n4;
       if(n0 == 0) {
       System.out.print(""); break;
