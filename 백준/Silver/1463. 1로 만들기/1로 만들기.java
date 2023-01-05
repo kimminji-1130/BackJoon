@@ -1,30 +1,28 @@
-import java.util.Scanner;
+import java.util.*;
+
 public class Main {
-	static Integer[] a;
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int N = in.nextInt();
-		a = new Integer[N + 1];
-		a[0] = a[1] = 0;
-		System.out.print(recur(N));
-	}
- 
-	static int recur(int N) {
- 
-		if (a[N] == null) { 
-			if (N % 6 == 0) {
-				a[N] = Math.min(recur(N - 1), Math.min(recur(N / 3), recur(N / 2))) + 1;
-			}
-			else if (N % 3 == 0) {
-				a[N] = Math.min(recur(N / 3), recur(N - 1)) + 1;
-			}
-			else if (N % 2 == 0) {
-				a[N] = Math.min(recur(N / 2), recur(N - 1)) + 1;
-			}
-			else {
-				a[N] = recur(N - 1) + 1;
-			}
-		}
-		return a[N];
-	}
-}
+   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a= sc.nextInt();
+    int c[]= new int[1000001];
+     c[0]=0;
+     c[1]=0;
+     c[2]=1;
+     c[3]=1;
+     for(int i=4;i<=a;i++){
+        c[i] = c[i-1]+1;
+       if(i%2==0){
+         if(c[i/2]+1<c[i]){
+           c[i] = c[i/2]+1;
+         }
+       }
+       if(i%3==0){
+         if(c[i/3]+1<c[i]){
+           c[i] = c[i/3]+1;
+         }
+       }
+       
+     }
+     System.out.print(c[a]);
+    }
+  }
