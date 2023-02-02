@@ -20,3 +20,28 @@ class Main {
   }
 }
 '''
+```
+import java.util.*;
+
+
+public class da {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
+		boolean c= false;
+		String a="";
+		for(int i=1;i<=n;i++) {
+			a+=i;
+		}
+		while(a.length()!=1) {
+			String b=a.substring(0,1);
+			a=a.substring(1);
+			if(c==true)	{a+=b; c=false; continue;}
+			c=true;
+		}
+		System.out.println(a);
+	}
+	}
+
+```
