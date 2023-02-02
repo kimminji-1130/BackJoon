@@ -20,9 +20,9 @@ class Main {
   }
 }
 '''
+## 2164번 카드2
 ```
 import java.util.*;
-
 
 public class da {
 
